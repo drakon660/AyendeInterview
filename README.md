@@ -21,3 +21,5 @@ So I came up with the following question, we have the following file (the full d
 The first value is the entry time, the second is the exit time and the third is the car id.
 
 Details about this file: This is UTF8 text file with space separated values using Windows line ending.
+
+What we need to do is to find out how much time a car spent in the lot based on this file. 
