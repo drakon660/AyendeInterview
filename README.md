@@ -16,7 +16,7 @@ to send a binary tree as a interview task, they are going to google –> copy & 
 
 So I came up with the following question, we have the following file (the full data set is 276 MB), that contains the entry / exit log to a parking lot.
 
-image
+![alt text](https://github.com/drakon660//AyendeInterview/blob/main/image.png?raw=true)
 
 The first value is the entry time, the second is the exit time and the third is the car id.
 
