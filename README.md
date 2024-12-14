@@ -1,23 +1,71 @@
-# AyendeInterview
-Interview questions are always tough to design. On the one hand, you need to create something that will not be trivial to do, and on the other hand,   
+# Ayende Interview  
 
-you have a pretty much hard time limit to a reasonable solution. For example, while implementing a linked list is something that I would expect anyone  
+Ayende (founder of **NHibernate** and **RavenDB**) shared a great interview task. Below is a copy of the original blog post:
 
-to be able to do in an interview, implementing a binary tree (including the balancing), is probably not going to be feasible.  
+---
 
+### Interview Questions and Challenges  
 
-Interview tasks (that candidate can do at home) are somewhat easier, because you don’t have the same time constraints, but at the same time,   
+Interview questions are always tough to design. On the one hand, you need to create something that is **not trivial** to do. On the other hand, you have a **hard time limit** for a reasonable solution.  
 
-if you ask for something that takes a week to write, candidates will skip the question and the position entirely. Another issue here is that if you ask a candidate  
+For example:  
+- Implementing a **linked list** is something I would expect anyone to do in an interview.  
+- Implementing a **binary tree** (including balancing), however, is probably not feasible within an interview time frame.  
 
-to send a binary tree as a interview task, they are going to google –> copy & paste –> send, and you learn absolutely nothing*.  
+---
 
-* Oh, sometimes you learn quite a lot, if a candidate cannot do that, they are pretty much disqualified themselves, but we could do that more easily with Fizz Buzz, after all.
+### Home Tasks vs. Time Constraints  
 
-So I came up with the following question, we have the following file (the full data set is 276 MB), that contains the entry / exit log to a parking lot.
+Interview tasks that candidates can do **at home** are somewhat easier because there aren’t the same time constraints. However:  
+- If the task takes **too long** (e.g., a week to complete), candidates will skip the question — and the position entirely.  
+- If the task is **too basic** (e.g., “send a binary tree”), candidates will just:  
+   - **Google → Copy & Paste → Send**.  
+   - This teaches you **nothing** about their abilities.  
 
-image
+> **Note**: Sometimes you *do* learn a lot if a candidate cannot even manage the “copy & paste” solution. In such cases, they pretty much disqualify themselves. But we could assess that more easily with **Fizz Buzz**, after all.  
 
-The first value is the entry time, the second is the exit time and the third is the car id.
+---
 
-Details about this file: This is UTF8 text file with space separated values using Windows line ending.
+### The Interview Task  
+
+So, I came up with the following question:  
+
+We have the following file (the full data set is **276 MB**) that contains the **entry/exit log** for a parking lot.  
+
+![File Example](#)  
+
+The file format:  
+- The **first value** is the **entry time**.  
+- The **second value** is the **exit time**.  
+- The **third value** is the **car ID**.  
+
+#### File Details:  
+- Encoding: **UTF-8** text file  
+- Delimiter: **Space-separated values**  
+- Line Endings: **Windows line endings**  
+
+---
+
+## Parameters  
+
+To generate a data file for testing, use the PowerShell script below.  
+
+### Script Overview  
+This script generates a random data file that mimics the format described above. It creates lines with:  
+1. Random **ISO 8601 timestamps** (entry and exit times).  
+2. Random **8-digit car IDs**.  
+3. A customizable **file size** in megabytes (MB).  
+
+---
+
+### Script Parameters  
+
+```powershell
+param(
+    [int]$FileSizeMB = 1, # Desired file size in MB
+    [string]$OutputPath = "data.txt" # Output file path
+)
+```
+
+> **Note**: The repository includes Ayende original solutions along with my own attempts and final version. Enjoy!
+
