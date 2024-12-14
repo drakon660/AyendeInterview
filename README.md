@@ -32,7 +32,7 @@ So, I came up with the following question:
 
 We have the following file (the full data set is **276 MB**) that contains the **entry/exit log** for a parking lot.  
 
-![File Example](#)  
+![File Example](https://github.com/drakon660//AyendeInterview/blob/main/image.png?raw=true)  
 
 The file format:  
 - The **first value** is the **entry time**.  
