@@ -207,5 +207,19 @@ public static class AyendeFileLoader
 
         return stats;
     }
+
+    public static IDictionary<long, long> AnalyzeV9(string filePath)
+    {
+        var stats = new Dictionary<long, long>();
+        using var reader = new RecordReader(filePath);
+        while (reader.MoveNext())
+        {
+            // Microoptimization: Use TryGetValue once, then update directly without double lookup
+            stats.TryGetValue(reader.Id, out long existingDuration);
+            stats[reader.Id] = existingDuration + reader.Duration;
+        }
+
+        return stats;
+    }
 }
 

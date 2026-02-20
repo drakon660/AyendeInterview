@@ -64,7 +64,7 @@ public class MyFileLoader
     {
         Dictionary<long, long> carPark = new Dictionary<long, long>();
         
-        StreamReader fileReader = new StreamReader(filePath);
+        using StreamReader fileReader = new StreamReader(filePath);
         string line;
         
         while ((line = fileReader.ReadLine())!=null)
@@ -95,7 +95,7 @@ public class MyFileLoader
     {
         Dictionary<long, long> carPark = new Dictionary<long, long>();
         
-        StreamReader fileReader = new StreamReader(filePath);
+        using StreamReader fileReader = new StreamReader(filePath);
         string line;
         while ((line = fileReader.ReadLine())!=null)
         {
@@ -125,11 +125,11 @@ public class MyFileLoader
     {
         Dictionary<long, long> carPark = new Dictionary<long, long>();
         
-        StreamReader fileReader = new StreamReader(filePath);
+        using StreamReader fileReader = new StreamReader(filePath);
         
         var buffer = new char[Constants.SizeOfRecord];
         
-        while (fileReader.ReadBlock(buffer)!=0)
+        while (fileReader.ReadBlock(buffer, 0, Constants.SizeOfRecord) == Constants.SizeOfRecord)
         {
             ReadOnlySpan<char> lineSpan = buffer.AsSpan();
            
