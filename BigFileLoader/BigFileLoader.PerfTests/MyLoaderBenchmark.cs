@@ -7,7 +7,7 @@ namespace BigFileLoader.PerfTests;
 [ThreadingDiagnoser]
 public class MyLoaderBenchmark
 {
-    private const string DataFileLocation = "D:\\src\\AyendeInterview\\data100.txt";
+    private const string DataFileLocation = "F:\\src\\AyendeInterview\\data100.txt";
     
     [Benchmark]
     public Task AsyncForeach() => MyFileLoader.Analyze_Foreach_Async(DataFileLocation);
