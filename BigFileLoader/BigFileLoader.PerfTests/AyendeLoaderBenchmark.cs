@@ -35,4 +35,7 @@ public class AyendeLoaderBenchmark
     
     [Benchmark]
     public void Ayende_V8() => AyendeFileLoader.AnalyzeV8(DataFileLocation);
+    
+    [Benchmark]
+    public void Ayende_V9() => AyendeFileLoader.AnalyzeV9(DataFileLocation);
 }
