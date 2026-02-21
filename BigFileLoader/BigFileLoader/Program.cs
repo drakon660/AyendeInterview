@@ -15,6 +15,13 @@ Measure(()=>AyendeFileLoader.AnalyzeV5(dataFileLocation), nameof(AyendeFileLoade
 Measure(()=>AyendeFileLoader.AnalyzeV6(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV6));
 Measure(()=>AyendeFileLoader.AnalyzeV7(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV7));
 Measure(()=>AyendeFileLoader.AnalyzeV8(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV8));
+Measure(()=>AyendeFileLoader.AnalyzeV9(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV9));
+Measure(()=>AyendeFileLoader.AnalyzeV10(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV10));
+Measure(()=>AyendeFileLoader.AnalyzeV11(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV11));
+Measure(()=>AyendeFileLoader.AnalyzeV12(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV12));
+Measure(()=>AyendeFileLoader.AnalyzeV13(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV13));
+Measure(()=>AyendeFileLoader.AnalyzeV14(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV14));
+Measure(()=>AyendeFileLoader.AnalyzeV15(dataFileLocation), nameof(AyendeFileLoader.AnalyzeV15));
 Console.WriteLine("My");
 await MeasureAsync(()=>MyFileLoader.Analyze_Foreach_Async(dataFileLocation),nameof(MyFileLoader.Analyze_Foreach_Async));
 Measure(()=>MyFileLoader.Analyze_While(dataFileLocation),nameof(MyFileLoader.Analyze_Foreach_Async));
